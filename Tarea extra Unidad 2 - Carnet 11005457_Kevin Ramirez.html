@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">do {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Generar un número aleatorio entre 1 y 9 para la computadora</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let numeroComputadora = Math.floor(Math.random() * 9) + 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let numeroUsuario;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Validar que el usuario ingrese un número entre 3 y 6</p>
+<p class="p1"><span class="Apple-converted-space">    </span>do {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>numeroUsuario = parseInt(prompt("Ingrese un número entre 3 y 6:"));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} while (numeroUsuario &lt; 3 || numeroUsuario &gt; 6);</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Pedir al usuario que adivine si su número es mayor, menor o igual</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let eleccion = prompt("¿Cree que su número es mayor, menor o igual al número de la computadora? (mayor/menor/igual)");</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let resultado;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (numeroUsuario &gt; numeroComputadora) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultado = "mayor";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else if (numeroUsuario &lt; numeroComputadora) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultado = "menor";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultado = "igual";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Mostrar los resultados</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let mensaje = `La computadora eligió ${numeroComputadora}, usted eligió ${numeroUsuario}. Su elección es ${resultado}. `;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>mensaje += (eleccion === resultado) ? "¡Ha adivinado!" : "No ha adivinado.";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>alert(mensaje);</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Preguntar si desea jugar otra vez</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var jugarDeNuevo = prompt("¿Quiere jugar otra vez? (SI/NO)").toUpperCase();</p>
+<p class="p1">} while (jugarDeNuevo === "SI");</p>
+<p class="p2"><br></p>
+<p class="p1">// Mostrar mensaje final con nombre y número de carnet</p>
+<p class="p1">alert("Gracias por jugar. Kevin Ramirez, Carnet: 11005457");</p>
+</body>
+</html>
